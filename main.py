@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from database import engine, Base
 from routers import expenses
+import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -22,3 +23,5 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(expenses.router)
 
+if __name__ =="__main__":
+    uvicorn.run(app,host="localhost",port=8000)

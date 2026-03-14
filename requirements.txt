@@ -3,3 +3,5 @@ pydantic[email]
 uvicorn
 sqlalchemy
 psycopg2-binary
+asyncpg
+streamlit

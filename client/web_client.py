@@ -8,13 +8,14 @@ st.title("Add Expense")
 amount = st.number_input("Amount")
 description = st.text_input("Description")
 category = st.text_input("Category")
+date = st.date_input("Date")
 
 if st.button("Submit"):
     data = {
         "Description": description,
         "Amount": amount,
         "Category": category,
-        "Date": "2026-03-13",
+        "Date": str(date),
         "Id": 4
     }
     print (data)

@@ -14,7 +14,7 @@ class ExpenseService:
     def add_expense(self, db, expense):
         return self.repo.create_expense(db, expense)
         
-    def delete_expense(self,id,db):
+    def delete_expense(self,db,id):
         return self.repo.delete_expense(db,id)  
     
     

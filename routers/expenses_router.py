@@ -18,11 +18,11 @@ def read_expenses(db: Session = Depends(get_db)):
     return service.get_expenses(db)
 
 
-@router.get("/expenses/{expense_id}")
+@router.get("/{expense_id}")
 def read_expense(expense_id: int, db: Session = Depends(get_db)):
     return service.get_expenses_by_id(db, expense_id)
 
 
-@router.delete("/expenses/{expense_id}")
+@router.delete("/{expense_id}")
 def delete_expense(expense_id: int, db: Session = Depends(get_db)):
     return service.delete_expense(db, expense_id)

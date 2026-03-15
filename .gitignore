@@ -15,4 +15,4 @@ proj_env/
 *.log
 
 # Database files
-*.db
+#*.db
